@@ -1,0 +1,9 @@
+/*ID: maosong1
+LANG: C
+PROB: breads
+*/
+#include<stdio.h>
+main()
+{
+	FILE *fin=fopen();
+}

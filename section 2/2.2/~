@@ -1,0 +1,26 @@
+/*ID:maosong1
+LANG:C++
+PROB:money
+*/
+#include<iostream>
+#include<string.h>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+long long d[10001];
+int v,n,ava[25];
+int main()
+{
+	freopen("money.in","r",stdin);
+//	freopen("money.out","w",stdout);
+	cin>>v>>n;
+	for(int i=0;i<v;i++) cin>>ava[i];
+	memset(d,0,sizeof(d));
+	for(int i=1;i<=n;i++)
+		for(int j=0;j<v;j++)
+		{
+			if(ava[j]<=i) d[i]+=1+d[i-j];
+		}
+	cout<<d[n]<<endl;
+	return 0;
+}

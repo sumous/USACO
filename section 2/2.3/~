@@ -1,0 +1,29 @@
+/*ID:maosong1
+LANG:C++
+PROB:agrinet
+*/
+#include<iostream>
+#include<string.h>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+long map[101][101],n;
+int main()
+{
+	freopen("agrinet.in","r",stdin);
+	freopen("agrinet.out","w",stdout);
+	cin>>n;
+	for(int i=0;i<n;i++) 
+		for(int j=0;j<n;j++) cin>>map[i][j];
+		
+	int ans=0;
+	for(int i=1;i<n;i++)
+	{
+		int tmp==map[0][i];
+		for(int j=0;j<i;j++)
+			if(map[j][i]<tmp) tmp=map[j][i];
+		ans+=tmp;
+	}
+	cout<<ans<<endl;
+	return 0;
+}
